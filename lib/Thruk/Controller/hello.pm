@@ -13,16 +13,19 @@ Hello World!.
 
 =head1 METHODS
 
-=cut
-
 
 =head2 index
+
+This is the entry point for thruk to start the plugin
 
 =cut
 
 sub index {
         my ( $c ) = @_;
         $c->stash->{title}           = 'Hello World!';
+        $c->stash->{'subtitle'}              = 'Hello World!';
+        $c->stash->{'infoBoxTitle'}          = 'Hello World!';
+        $c->stash->{'no_auto_reload'}      = 1;
         $c->stash->{template} = 'hello.tt';
         $c->stash->{hello_var} = 'Hello World!'; # This is our magic variable
 }
