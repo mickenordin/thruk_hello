@@ -1,35 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <script type="text/javascript">
-    <!--
-        var url_prefix = '[% url_prefix %]';
-    -->
-    </script>
-    <title>[% title_prefix %][% title %]</title>
-    <link rel="shortcut icon" href="[% url_prefix %]themes/[% theme %]/images/favicon.ico" type="image/ico" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    [% IF thruk_debug %]
-      <script type="text/javascript" charset="UTF-8" src="[% url_prefix %]plugins/api_conf/ext-[% extjs_version %]/build/ext-all-debug.js"></script>
-    [% ELSE %]
-      <!--[IF IE]>
-        <script type="text/javascript" charset="UTF-8" src="[% url_prefix %]plugins/api_conf/ext-[% extjs_version %]/build/ext-all-debug.js"></script>
-      <![ENDIF]-->
-      <!--[IF !IE]> -->
-        <script type="text/javascript" charset="UTF-8" src="[% url_prefix %]plugins/api_conf/ext-[% extjs_version %]/build/ext-all.js"></script>
-      <!-- <![ENDIF]-->
-    [% END %]
-[% PROCESS _common_css.tt use_frames=1 %]
-[% PROCESS _header.tt overlib=1
-                      css=["plugins/conf/conf.css","plugins/conf/linedtextarea/jquery-linedtextarea.css", "javascript/jstree-3.0.9/themes/default/style.min.css"]
-                      js=["plugins/conf/conf.js", "javascript/jstree-3.0.9/jstree.min.js"]
-%]
-</head>
-<body>
-[% PROCESS _message.tt %]
-[% PROCESS _overdiv.tt %]
-[% PROCESS _infobox.tt %]
+        <head>
+                <title>[% title_prefix %][% title %]</title>
+                <link rel="shortcut icon" href="[% url_prefix %]themes/[% theme %]/images/favicon.ico" type="image/ico" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+                [% PROCESS _common_css.tt use_frames=1 %]
+                [% PROCESS _header.tt overlib=1
+                        css=["plugins/conf/conf.css","plugins/conf/linedtextarea/jquery-linedtextarea.css", "javascript/jstree-3.0.9/themes/default/style.min.css"]
+                        js=["plugins/conf/conf.js", "javascript/jstree-3.0.9/jstree.min.js"]
+                %]
+        </head>
+        <body>
+                [% PROCESS _message.tt %]
+                [% PROCESS _overdiv.tt %]
+                [% PROCESS _infobox.tt %]
                 <h1>[% hello_var %]</h1> <!-- This is where we access our variable -->
         </body>
 </html>
