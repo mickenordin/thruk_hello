@@ -1,4 +1,0 @@
-The 'Hello World' plugin displays the words "Hello World!" on the
-plugin page hello.cgi.
-
-Url: hello.cgi

@@ -1,2 +1,3 @@
-# thruk_hello
-This is a very simple Thruk plugin (http://thruk.org) used for learning purposes
+# Repo moved
+This repo has now been moved to my own code hosting solution on smolnet.org:
+* [thruk_hello](https://code.smolnet.org/micke/thruk_hello)
